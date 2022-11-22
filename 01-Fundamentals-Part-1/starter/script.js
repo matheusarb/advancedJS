@@ -14,3 +14,8 @@
 var123 = 12;
 
 console.log(var123);
+
+const firstName = "Matheus";
+const lastName = "Ribeiro";
+
+console.log(`${firstName} ${lastName}`);
