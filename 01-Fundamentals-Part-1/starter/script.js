@@ -1,21 +1,11 @@
-// let js = "amazing";
+// const now = 2037;
 
-// console.log("jonas");
-// console.log(js);
+// const ageJonas = now - 1991;
+// const ageSarah = now - 2018;
 
-// let javaScriptIsFun = true;
-// console.log(javaScriptIsFun);
+// console.log(now - 1991 > now - 2018);
 
-// console.log(typeof true);
-// console.log(typeof javaScriptIsFun);
-// console.log(typeof 23);
-// console.log(typeof "amtehsu");
+let x, y;
+x = y = 25 - 10 - 5;
 
-var123 = 12;
-
-console.log(var123);
-
-const firstName = "Matheus";
-const lastName = "Ribeiro";
-
-console.log(`${firstName} ${lastName}`);
+console.log(x, y);
