@@ -96,3 +96,19 @@ function FUNCTION_johnBMI2(bmi1) {
   return bmi1;
 }
 console.log(FUNCTION_johnBMI2());
+
+//FINAL PART - COMPARING BOTH BMI'S
+let markTotalBMI = markBMI1 + markBMI2;
+let johnTotalBMI = johnBMI1 + johnBMI2;
+
+console.log(markTotalBMI);
+console.log(johnTotalBMI);
+
+let markHigherBMI = markTotalBMI > johnTotalBMI;
+console.log(markHigherBMI);
+
+if (markHigherBMI === true) {
+  console.log("MARK É MAGRIN");
+} else {
+  console.log("MARK GORDAO");
+}
