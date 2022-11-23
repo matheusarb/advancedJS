@@ -107,8 +107,16 @@ console.log(johnTotalBMI);
 let markHigherBMI = markTotalBMI > johnTotalBMI;
 console.log(markHigherBMI);
 
-if (markHigherBMI === true) {
-  console.log("MARK É MAGRIN");
+if (!markHigherBMI === true) {
+  console.log(
+    `Mark has a higher (${Math.round(
+      markTotalBMI
+    )} BMI) than John's (${Math.round(johnTotalBMI)} BMI)`
+  );
 } else {
-  console.log("MARK GORDAO");
+  console.log(
+    `John's (${Math.round(
+      johnTotalBMI
+    )} BMI) is higher than Mark's (${Math.round(markTotalBMI)} BMI)`
+  );
 }
