@@ -16,5 +16,3 @@ ${myName}`;
 let easyStrM = `Hello,
 this is much
 easier`;
-
-console.log(easyStrM);
