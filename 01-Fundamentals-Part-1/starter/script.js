@@ -1,11 +1,24 @@
-// const now = 2037;
+//type conversion
 
-// const ageJonas = now - 1991;
-// const ageSarah = now - 2018;
+// const inputYear = "1992";
 
-// console.log(now - 1991 > now - 2018);
+// console.log(Number(inputYear));
+// console.log(Number(inputYear) + 18);
 
-// let x, y;
-// x = y = 25 - 10 - 5;
+// console.log(Number("Jonas"));
+// console.log(typeof NaN);
+// console.log(String(23), 23);
 
-// console.log(x, y);
+//type coercion1234
+// const hasDriverLicense = true;
+// const hasGoodVision = false;
+
+// console.log(!hasDriverLicense && !hasGoodVision);
+
+// const shouldDrive = hasDriverLicense && hasGoodVision;
+
+// if (!shouldDrive) {
+//   console.log("sarah is able");
+// } else {
+//   console.log("someone else");
+// }
