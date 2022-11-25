@@ -18,7 +18,7 @@
 
 const calcAll = (bill) => {
   let totalValue = 0;
-  let tip = bill > 50 && bill < 300 ? bill * 0.15 : bill * 0.2;
+  let tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
   totalValue += bill + tip;
   console.log(
     `The bill is ${bill}, the tip is ${tip}, the total is ${totalValue}`
