@@ -26,4 +26,9 @@ const calcAll = (bill) => {
   return totalValue;
 };
 
-console.log(calcAll(400));
+console.log(calcAll(430));
+
+let y = 10;
+let x = !y >= 10 ? true : false;
+
+console.log(x);
