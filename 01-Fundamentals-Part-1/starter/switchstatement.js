@@ -21,5 +21,13 @@ switch (day) {
 
 if (day === "monday") {
   console.log("shit");
-} else if (day === "tuesday") {
-}
+} else if (day === "tuesday");
+
+const sairHj = false;
+
+const destino = !sairHj === true ? "partiu" : "fica doidao";
+console.log(destino);
+
+console.log(
+  `vai fazer oq hoje? ${!sairHj === true ? "vou sair" : "vou ficar em casa"}`
+);
