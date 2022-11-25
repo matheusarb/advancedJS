@@ -46,18 +46,20 @@ let avgKoalasD3 = 102;
 // }
 
 //TASK 3 (BONUS 1)
-const minimunPoints = 100;
-avgDolphinsD3 = 103;
-avgKoalasD3 = 103;
-const samePoints = avgDolphinsD3 === avgKoalasD3;
-const samePointsGreaterThan100 = samePoints >= 100;
+// const minimunPoints = 100;
+// avgDolphinsD3 = 105;
+// avgKoalasD3 = 105;
+// const samePoints = avgDolphinsD3 === avgKoalasD3;
+// const samePointsGreaterThan100 = samePoints >= 100;
 
-if (avgDolphinsD3 > minimunPoints && avgDolphinsD3 > avgKoalasD3) {
-  console.log("Dolphins are the winners!");
-} else if (avgKoalasD3 > minimunPoints && avgKoalasD3 > avgDolphinsD3) {
-  console.log("Koalas are the winners");
-} else if (samePoints && samePointsGreaterThan100) {
-  console.log("it's a draw!!!!!");
-} else {
-  console.log("no winners in the contest!");
-}
+// if (avgDolphinsD3 > minimunPoints && avgDolphinsD3 > avgKoalasD3) {
+//   console.log("Dolphins are the winners! 🏆");
+// } else if (avgKoalasD3 > minimunPoints && avgKoalasD3 > avgDolphinsD3) {
+//   console.log("Koalas are the winners! 🏆");
+// } else if (
+//   avgDolphinsD3 &&
+//   avgKoalasD3 > 100 &&
+//   avgDolphinsD3 === avgKoalasD3
+// ) {
+//   console.log("it's a draw! Both teams win 🏆");
+// }
