@@ -7,6 +7,9 @@ logger();
 logger();
 
 //functions are like machines
+//parameters are like variables that are specific only to the function
+//they are also placeholders which holds empty spaces that needs to be filled
+// when calling the function
 
 function fruitProcessor(apples, oranges) {
   console.log(apples, oranges);
@@ -14,6 +17,6 @@ function fruitProcessor(apples, oranges) {
   return juice;
 }
 
-console.log(fruitProcessor(5, 0));
-//parameters are like variables that are specific only to the function
-//they
+// remember to store the returned value in a variable!!
+const appleJuice = fruitProcessor(5, 0);
+console.log(appleJuice);
