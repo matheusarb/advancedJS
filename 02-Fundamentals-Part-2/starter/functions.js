@@ -79,19 +79,19 @@
 // }
 
 // console.log(fruitProcessor(2, 3));
-const calcAge = function (birthYear) {
-  return 2022 - birthYear;
-};
+// const calcAge = function (birthYear) {
+//   return 2022 - birthYear;
+// };
 
-const yearsUntilRetirement = function (birthYear, firstName) {
-  const age = calcAge(birthYear);
-  const retirement = 65 - age;
+// const yearsUntilRetirement = function (birthYear, firstName) {
+//   const age = calcAge(birthYear);
+//   const retirement = 65 - age;
 
-  if (retirement <= 0) {
-    console.log(`${firstName}, enjoy your retirement!`);
-  } else {
-    return `${firstName} retires in ${retirement}`;
-  }
-};
+//   if (retirement <= 0) {
+//     console.log(`${firstName}, enjoy your retirement!`);
+//   } else {
+//     return `${firstName} retires in ${retirement}`;
+//   }
+// };
 
-console.log(yearsUntilRetirement(1940, "Matheus"));
+// console.log(yearsUntilRetirement(1940, "Matheus"));
