@@ -44,3 +44,20 @@
 // };
 // const age2 = calcAge2(1992);
 // console.log(age2);
+
+// 3. ARROW FUNCTIONS ** they do not get the 'this' keyword,
+// therefore they must not be used in every scenario
+
+const calcAge3 = (birthYear) => `${2022 - birthYear} years old.`;
+
+const age3 = calcAge3(1992);
+console.log(age3);
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = 2022 - birthYear;
+  const retirement = 65 - age;
+  return `${firstName} retires in ${retirement}`;
+};
+
+console.log(yearsUntilRetirement(1992, "Matheus"));
+console.log(yearsUntilRetirement(1991, "Luiggi"));
