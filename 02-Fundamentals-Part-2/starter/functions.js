@@ -1,3 +1,5 @@
+// 1. FUNCTIONS
+
 // const logger = () => {
 //   console.log("hello world");
 // };
@@ -25,4 +27,20 @@
 // const appleOrangeJuice = fruitProcessor(2, 4);
 // console.log(appleOrangeJuice);
 
-// FUNCTION DECLARATIONS VS FUNCTION EXPRESSIONS
+// 2. FUNCTION DECLARATIONS VS FUNCTION EXPRESSIONS
+
+// function declaration
+// const age1 = calcAge1(1992);
+
+// function calcAge1(birthYear) {
+//   return `${2022 - birthYear} years old.`;
+// }
+
+// // console.log(age1);
+
+// // function expression
+// const calcAge2 = function (birthYear) {
+//   return `${2022 - birthYear} years old.`;
+// };
+// const age2 = calcAge2(1992);
+// console.log(age2);
