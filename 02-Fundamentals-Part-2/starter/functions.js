@@ -47,6 +47,7 @@
 
 // 3. ARROW FUNCTIONS ** they do not get the 'this' keyword,
 // therefore they must not be used in every scenario
+// great for one-line functions
 
 // const calcAge3 = (birthYear) => `${2022 - birthYear} years old.`;
 
@@ -66,15 +67,31 @@
 
 // console.log(cutFruitPieces(4));
 
-function cutFruitPieces(fruit) {
-  return fruit * 4;
-}
-function fruitProcessor(apples, oranges) {
-  const applePieces = cutFruitPieces(apples);
-  const orangePieces = cutFruitPieces(oranges);
+// function cutFruitPieces(fruit) {
+//   return fruit * 4;
+// }
+// function fruitProcessor(apples, oranges) {
+//   const applePieces = cutFruitPieces(apples);
+//   const orangePieces = cutFruitPieces(oranges);
 
-  const juice = `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of oranges`;
-  return juice;
-}
+//   const juice = `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of oranges`;
+//   return juice;
+// }
 
-console.log(fruitProcessor(2, 3));
+// console.log(fruitProcessor(2, 3));
+const calcAge = function (birthYear) {
+  return 2022 - birthYear;
+};
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+
+  if (retirement <= 0) {
+    console.log(`${firstName}, enjoy your retirement!`);
+  } else {
+    return `${firstName} retires in ${retirement}`;
+  }
+};
+
+console.log(yearsUntilRetirement(1940, "Matheus"));
