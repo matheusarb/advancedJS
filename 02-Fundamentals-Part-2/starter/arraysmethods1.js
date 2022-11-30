@@ -30,4 +30,9 @@ console.log(friends);
 console.log(friends.indexOf("Preto"));
 
 // 4 INCLUDES METHOD - returns true if the element is in the array or false if otherwise
+// this method uses strict equality operator to check the existence of the given value
 console.log(friends.includes("Luiggi"));
+
+if (friends.includes("Luiggi")) {
+  console.log("you have a great friend called Luiggi!");
+}
