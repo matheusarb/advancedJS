@@ -1,23 +1,20 @@
-const BILLS = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-for (let b = 0; b <= BILLS.length; b++) {
-  //console.log(BILLS[b]);
+function calcTip(bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 }
 
+const BILLS = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const tips = [];
 const totals = [];
 
-function calcTip(bill) {
-  let tip = bill > 50 && bill < 300 ? bill * 0.15 : bill * 0.2;
-
-  for (let i = 0; i <= BILLS.length; i++) {
-    tips.push(calcTip(BILLS[i]));
-  }
-  for (let j = 0; j <= tips.length; j++) {
-    totals = BILLS[i] + tips[j];
-  }
-
-  return totals;
+for (let i = 0; i < BILLS.length; i++) {
+  const tip = calcTip(BILLS[i]);
+  tips.push(tip);
+  totals.push(tip + BILLS[i]);
 }
+
+console.log(BILLS);
+console.log(tips);
+console.log(totals);
 
 // function calcAv(arr) {
 //     let sum = 0;
@@ -26,8 +23,6 @@ function calcTip(bill) {
 
 //     }
 // }
-
-console.log(calcTip(100));
 //console.log(calcTip(22));
 
 // loop through bills array and generate tips for each bill inside
