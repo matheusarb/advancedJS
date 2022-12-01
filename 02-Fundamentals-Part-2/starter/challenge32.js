@@ -1,7 +1,5 @@
-//let GLOBAL_BMI = mass / height ** 2;
-
 const user1 = {
-  fullname: "Mark",
+  fullname: "Mark Miller",
   mass: 78,
   height: 1.69,
   calcBMI: function () {
@@ -11,7 +9,7 @@ const user1 = {
 };
 
 const user2 = {
-  fullname: "John",
+  fullname: "John Travolta",
   mass: 92,
   height: 1.95,
   calcBMI: function () {
@@ -20,15 +18,13 @@ const user2 = {
   },
 };
 
-console.log(user1.calcBMI());
-console.log(user1.BMI);
-console.log(user2.calcBMI());
-console.log(user2.BMI);
+console.log(user1.calcBMI(), user2.calcBMI());
+console.log(user1.BMI, user2.BMI);
 
 user1.BMI > user2.BMI
   ? console.log(
       `${user1.fullname}'s BMI(${user1.BMI}) is higher than ${user2.fullname}'s BMI(${user2.BMI})`
     )
   : console.log(
-      `${user2.fullname}s BMI(${user2.BMI}) is higher than ${user1.fullname}'s BMI(${user1.BMI})`
+      `${user2.fullname}'s BMI(${user2.BMI}) is higher than ${user1.fullname}'s BMI(${user1.BMI})`
     );
