@@ -87,13 +87,13 @@
 //   rep++;
 // }
 
-let dice = Math.trunc(Math.random() * 6) + 1;
-//console.log(dice);
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// //console.log(dice);
 
-while (dice !== 16) {
-  console.log(`You got ${dice}. Keep rolling the dice!`);
-  dice = Math.trunc(Math.random() * 20) + 1;
-  if (dice === 16) {
-    console.log(`You got ${dice}!`);
-  }
-}
+// while (dice !== 16) {
+//   console.log(`You got ${dice}. Keep rolling the dice!`);
+//   dice = Math.trunc(Math.random() * 20) + 1;
+//   if (dice === 16) {
+//     console.log(`You got ${dice}!`);
+//   }
+// }
