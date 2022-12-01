@@ -1,4 +1,4 @@
-// initial value | condition | increment
+// 1. FOR LOOP - initial value | condition | increment
 
 // for (let rep = 1; rep <= 10; rep++) {
 //   console.log(`lifting! rep number ${rep} 🏋️‍♂️`);
@@ -33,7 +33,7 @@
 
 // console.log(ages);
 
-// CONTINUE STATEMENT
+// 2. CONTINUE STATEMENT
 // console.log("---STRINGS ONLY---");
 // for (let i = 0; i < matheusArray.length; i++) {
 //   // if the typeof value is different of a string, go to the other index/position to check it.
@@ -42,6 +42,7 @@
 //   console.log(matheusArray[i], typeof matheusArray[i]);
 // }
 
+// 3. BREAK STATEMENT
 // console.log("---BREAK WITH NUMBER---");
 // for (let i = 0; i < matheusArray.length; i++) {
 //   // if the typeof value is different of a string, go to the other index/position to check it.
@@ -50,24 +51,49 @@
 //   console.log(matheusArray[i], typeof matheusArray[i]);
 // }
 
-const matheusArray = [
-  "Matheus",
-  "Ribeiro",
-  2022 - 1992,
-  "programmer",
-  ["Luiggi", "Tata", "Xande"],
-];
+// const matheusArray = [
+//   "Matheus",
+//   "Ribeiro",
+//   2022 - 1992,
+//   "programmer",
+//   ["Luiggi", "Tata", "Xande"],
+// ];
 
-for (let i = matheusArray.length - 1; i >= 0; i--) {
-  console.log(i, matheusArray[i]);
-}
+// for (let i = matheusArray.length - 1; i >= 0; i--) {
+//   console.log(i, matheusArray[i]);
+// }
 
-for (let exercise = 1; exercise < 4; exercise++) {
-  console.log(`--------Starting exercise ${exercise}`);
+// for (let exercise = 1; exercise < 4; exercise++) {
+//   console.log(`--------Starting exercise ${exercise}`);
 
-  for (let rep = 1; rep < 6; rep++) {
-    console.log(
-      `Exercise ${exercise}:-----------Lifting weights repetition ${rep}`
-    );
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(
+//       `Exercise ${exercise}:-----------Lifting weights repetition ${rep}`
+//     );
+//   }
+// }
+
+// WHILE LOOPS
+
+// for (let rep = 1; rep < 11; rep++) {
+//   console.log(`lifting weight! Rep ${rep}`);
+// }
+
+//console.log("-------BREAK----------");
+
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(`WHILE: lifting weight! Rep ${rep}`);
+//   rep++;
+// }
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+//console.log(dice);
+
+while (dice !== 16) {
+  console.log(`You got ${dice}. Keep rolling the dice!`);
+  dice = Math.trunc(Math.random() * 20) + 1;
+  if (dice === 16) {
+    console.log(`You got ${dice}!`);
   }
 }
