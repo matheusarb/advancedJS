@@ -22,7 +22,7 @@ console.log(bills, tips, totals);
 
 function calcAverage(arr) {
   let sumAll = 0;
-  let average;
+  //let average;
   for (let i = 0; i < arr.length; i++) {
     sumAll += arr[i];
   }
@@ -32,7 +32,7 @@ function calcAverage(arr) {
   return sumAll / arr.length;
 }
 
-// GUARDE TODO VALOR GERADO DENTRO DE UMA VARIÁVEL!!!!!!!!!!!
+// GUARDE TODO VALOR GERADO DENTRO DE UMA VARIÁVEL!!!!!!!!!!! (OU QUASE TODO)
 
 console.log(calcAverage([20, 22, 30, 50, 125, 218, 92]));
 
