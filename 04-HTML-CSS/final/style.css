@@ -22,12 +22,33 @@ h2 {
   margin-bottom: 20px;
 }
 
-.p_paragraph {
+p {
   margin-bottom: 20px;
-  text-align: center;
 }
 
 #your-name {
   border: 5px solid rgb(175, 171, 171);
   background-color: rgb(141, 141, 102);
+  width: 400px;
+  padding: 25px;
+  margin-top: 35px;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+a {
+  background-color: yellowgreen;
+}
+
+#your-name h2 {
+  font-size: 28px;
+  color: darkred;
+}
+
+img {
+  width: 400px;
 }
