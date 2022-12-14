@@ -1,3 +1,33 @@
-.doggy {
-  height: 12px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(223, 223, 223);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  padding: 50px;
+}
+
+.h1_paragraph {
+  border: 2px solid black;
+  font-size: 40px;
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.p_paragraph {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#your-name {
+  border: 5px solid rgb(175, 171, 171);
+  background-color: rgb(141, 141, 102);
 }
