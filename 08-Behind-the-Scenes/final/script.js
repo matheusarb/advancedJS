@@ -231,3 +231,18 @@ console.log('Before marriage:', jessica2);
 console.log('After marriage: ', jessicaCopy);
 */
 
+function calcularIdade(diaDeNascimento, mesDeNascimento, anoDeNascimento) {
+  const diaAtual = 10;
+  const mesAtual = 1;
+  const anoAtual = 2023;
+
+  let idade = anoAtual - anoDeNascimento;
+
+  if (diaDeNascimento >= diaAtual && mesDeNascimento === mesAtual) {
+    console.log(idade - 1);
+  } else if (diaDeNascimento < diaAtual) {
+    return console.log(idade - 2);
+  }
+}
+
+console.log(calcularIdade(21, 1, 1992));
