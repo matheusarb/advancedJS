@@ -19,14 +19,14 @@ function calcAge(birthYear) {
       // Reasssigning outer scope's variable
       output = 'NEW OUTPUT!';
 
-      const str = `Oh, and you're a millenial, ${firstName}`;
-      console.log(str);
+      const msg = `Oh, and you're a millenial, ${firstName}`;
+      console.log(msg);
 
       function add(a, b) {
         return a + b;
       }
     }
-    // console.log(str);
+    // console.log(msg);
     console.log(millenial);
     // console.log(add(2, 3));
     console.log(output);
@@ -231,18 +231,34 @@ console.log('Before marriage:', jessica2);
 console.log('After marriage: ', jessicaCopy);
 */
 
-function calcularIdade(diaDeNascimento, mesDeNascimento, anoDeNascimento) {
-  const diaAtual = 10;
-  const mesAtual = 1;
-  const anoAtual = 2023;
+function calcAge(birthYear) {
+  const age = 2037 - birthYear;
 
-  let idade = anoAtual - anoDeNascimento;
+  function printAge() {
+    const output = `Your name is ${firstName}, you are ${age}, born in ${birthYear}`;
+    console.log(output);
+    let msg = '';
 
-  if (diaDeNascimento >= diaAtual && mesDeNascimento === mesAtual) {
-    console.log(idade - 1);
-  } else if (diaDeNascimento < diaAtual) {
-    return console.log(idade - 2);
+    if (birthYear >= 1981 && birthYear <= 1996) {
+      const firstName = 'Didi';
+      var millenial = true;
+      msg = `Oh, and you're a millenian, ${firstName}`;
+      console.log(msg);
+
+      function add(a, b) {
+        return a + b;
+      }
+    } else {
+      msg = `Oh, you are not a millenial`;
+      console.log(msg);
+    }
+    console.log(millenial);
+    //console.log(add(2, 3));
   }
+  printAge();
+
+  return age;
 }
 
-console.log(calcularIdade(21, 1, 1992));
+const firstName = 'Matheus';
+calcAge(1992);
