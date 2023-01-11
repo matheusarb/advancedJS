@@ -231,34 +231,117 @@ console.log('Before marriage:', jessica2);
 console.log('After marriage: ', jessicaCopy);
 */
 
-function calcAge(birthYear) {
-  const age = 2037 - birthYear;
+// function calcAge(birthYear) {
+//   const age = 2037 - birthYear;
 
-  function printAge() {
-    const output = `Your name is ${firstName}, you are ${age}, born in ${birthYear}`;
-    console.log(output);
-    let msg = '';
+//   function printAge() {
+//     let output = `Your name is ${firstName}, you are ${age}, born in ${birthYear}`;
+//     console.log(output);
+//     let msg = '';
 
-    if (birthYear >= 1981 && birthYear <= 1996) {
-      const firstName = 'Didi';
-      var millenial = true;
-      msg = `Oh, and you're a millenian, ${firstName}`;
-      console.log(msg);
+//     if (birthYear >= 1981 && birthYear <= 1996) {
+//       const firstName = 'Didi';
+//       var millenial = true;
+//       //Creating NEW variable with same name as outer scope's variable
+//       msg = `Oh, and you're a millenian, ${firstName}`;
+//       console.log(msg);
 
-      function add(a, b) {
-        return a + b;
-      }
-    } else {
-      msg = `Oh, you are not a millenial`;
-      console.log(msg);
-    }
-    console.log(millenial);
-    //console.log(add(2, 3));
-  }
-  printAge();
+//       function add(a, b) {
+//         return a + b;
+//       }
 
-  return age;
-}
+//       //Reassinging outer scope's variable
+//       output = 'NEW OUTPUT';
+//     } else {
+//       msg = `Oh, you are not a millenial`;
+//       console.log(msg);
+//     }
+//     console.log(millenial);
+//     //console.log(add(2, 3));
+//     console.log(output);
+//   }
+//   printAge();
 
-const firstName = 'Matheus';
-calcAge(1992);
+//   return age;
+// }
+
+// const firstName = 'Matheus';
+// calcAge(1992);
+
+//console.log(me);
+// console.log(job);
+// console.log(year);
+
+// var me = 'Matheus';
+// let job = 'programmer';
+// const year = 2023;
+
+// //FUNCTIONS
+
+// console.log(addDeclaration(2, 3));
+// console.log(addExpr(2, 3));
+// console.log(addArrow(2, 3));
+
+// function addDeclaration(a, b) {
+//   return a + b;
+// }
+
+// const addExpr = function (a, b) {
+//   return a + b;
+// };
+
+// var addArrow = (a, b) => a + b;
+
+//THIS Keyword
+
+// console.log(this);
+
+// const calcAge = function (birthYear) {
+//   console.log(2037 - birthYear);
+//   console.log(this);
+//   const insideFunc = () => {
+//     return console.log(this);
+//   };
+//   insideFunc();
+// };
+
+// // calcAge(1992);
+
+// const calcAgeArrow = birthYear => {
+//   return console.log(this);
+// };
+
+// calcAgeArrow();
+
+// console.log(jonas.calcAge());
+
+// const matheus = {
+//   year: 2002,
+// };
+
+// matheus.calcAge = jonas.calcAge;
+// console.log(matheus.calcAge());
+
+let firstName = 'Matheus';
+const jonas = {
+  firstName: 'Jonas',
+  year: 1991,
+  calcAge: function () {
+    //console.log(this);
+    console.log(2037 - this.year);
+    const self = this;
+    const isMillenial = function () {
+      console.log(self);
+      console.log(self.year >= 1981 && self.year <= 1996);
+    };
+    isMillenial();
+  },
+
+  greet: () => {
+    console.log(`Hey ${this.firstName}`);
+  },
+};
+
+jonas.greet();
+console.log(this.firstName);
+jonas.calcAge();
