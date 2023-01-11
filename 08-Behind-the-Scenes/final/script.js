@@ -322,50 +322,110 @@ console.log('After marriage: ', jessicaCopy);
 // matheus.calcAge = jonas.calcAge;
 // console.log(matheus.calcAge());
 
-let firstName = 'Matheus';
-const jonas = {
-  firstName: 'Jonas',
-  year: 1991,
+// let firstName = 'Matheus';
+// const jonas = {
+//   firstName: 'Jonas',
+//   year: 1991,
 
-  //SOLUTION 1
-  // calcAge: function () {
-  //   //console.log(this);
-  //   console.log(2037 - this.year);
-  //   const self = this;
-  //   const isMillenial = function () {
-  //     console.log(self);
-  //     console.log(self.year >= 1981 && self.year <= 1996);
-  //   };
-  //   isMillenial();
-  // },
+//SOLUTION 1
+// calcAge: function () {
+//   //console.log(this);
+//   console.log(2037 - this.year);
+//   const self = this;
+//   const isMillenial = function () {
+//     console.log(self);
+//     console.log(self.year >= 1981 && self.year <= 1996);
+//   };
+//   isMillenial();
+// },
 
-  //SOLUTION 2
-  calcAge: function () {
-    //console.log(this);
-    console.log(2037 - this.year);
-    const isMillenial = () => {
-      console.log(this);
-      console.log(this.year >= 1981 && this.year <= 1996);
-    };
-    isMillenial();
-  },
+//SOLUTION 2
+//   calcAge: function () {
+//     //console.log(this);
+//     console.log(2037 - this.year);
+//     const isMillenial = () => {
+//       console.log(this);
+//       console.log(this.year >= 1981 && this.year <= 1996);
+//     };
+//     isMillenial();
+//   },
 
-  greet: () => {
-    console.log(`Hey ${this.firstName}`);
-  },
+//   greet: () => {
+//     console.log(`Hey ${this.firstName}`);
+//   },
+// };
+
+// //jonas.greet();
+// //console.log(this.firstName);
+// jonas.calcAge();
+
+// const add = function () {
+//   let result = 0;
+//   for (let i = 0; i < arguments.length; i++) {
+//     result += arguments[i];
+//   }
+//   return result;
+// };
+
+// console.log(add(1, 2, 3));
+// console.log(add(1, 2, 3, 4, 5));
+
+// let age = 30;
+// let oldAge = age;
+// console.log(age);
+// age = 35;
+// console.log(age);
+// oldAge = 'hiho';
+// console.log(oldAge);
+
+// const me = {
+//   name: 'matheus',
+//   age: 30,
+// };
+
+// const friend = me;
+// friend.age = 25;
+// console.log('Friend:', friend);
+// console.log('Me:', me);
+
+// Primitive Types
+// let lastName = 'Williams';
+// let oldLastName = lastName;
+// lastName = 'Davies';
+// console.log(lastName, '', oldLastName);
+
+// //Reference types
+// const jessica = {
+//   firstName: 'Jessica',
+//   lastName: 'Williams',
+//   age: 20,
+// };
+
+// //Copying objects
+// const marriedJessica = { ...jessica };
+// marriedJessica.lastName = 'Davies';
+// marriedJessica.age = 24;
+
+// console.log(jessica);
+// console.log(marriedJessica);
+
+//Another way of copying
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 20,
+  family: ['Alice', 'Thuram', 'bennzama'],
 };
 
-//jonas.greet();
-//console.log(this.firstName);
-jonas.calcAge();
-
-const add = () => {
-  let result = 0;
-  for (let i = 0; i < arguments.length; i++) {
-    result += arguments[i];
-  }
-  return result;
+let jessicaCopy = {
+  birthYear: 1992,
 };
 
-console.log(add(1, 2, 3));
-console.log(add(1, 2, 3, 4, 5));
+Object.assign(jessicaCopy, jessica2);
+//console.log(jessicaCopy);
+
+jessicaCopy.family.push('tuilo', 'jeromel');
+console.log(jessica2, jessicaCopy);
+
+//shallow copies, as Object.assign() and rest operator [...] only copies the properties in the first level
+//if there are objects assigned inside the copied object, they will not be cloned
