@@ -326,13 +326,26 @@ let firstName = 'Matheus';
 const jonas = {
   firstName: 'Jonas',
   year: 1991,
+
+  //SOLUTION 1
+  // calcAge: function () {
+  //   //console.log(this);
+  //   console.log(2037 - this.year);
+  //   const self = this;
+  //   const isMillenial = function () {
+  //     console.log(self);
+  //     console.log(self.year >= 1981 && self.year <= 1996);
+  //   };
+  //   isMillenial();
+  // },
+
+  //SOLUTION 2
   calcAge: function () {
     //console.log(this);
     console.log(2037 - this.year);
-    const self = this;
-    const isMillenial = function () {
-      console.log(self);
-      console.log(self.year >= 1981 && self.year <= 1996);
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
     };
     isMillenial();
   },
@@ -342,6 +355,17 @@ const jonas = {
   },
 };
 
-jonas.greet();
-console.log(this.firstName);
+//jonas.greet();
+//console.log(this.firstName);
 jonas.calcAge();
+
+const add = () => {
+  let result = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    result += arguments[i];
+  }
+  return result;
+};
+
+console.log(add(1, 2, 3));
+console.log(add(1, 2, 3, 4, 5));
