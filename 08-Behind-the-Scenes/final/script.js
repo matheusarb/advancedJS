@@ -410,22 +410,22 @@ console.log('After marriage: ', jessicaCopy);
 // console.log(marriedJessica);
 
 //Another way of copying
-const jessica2 = {
-  firstName: 'Jessica',
-  lastName: 'Williams',
-  age: 20,
-  family: ['Alice', 'Thuram', 'bennzama'],
-};
+// const jessica2 = {
+//   firstName: 'Jessica',
+//   lastName: 'Williams',
+//   age: 20,
+//   family: ['Alice', 'Thuram', 'bennzama'],
+// };
 
-let jessicaCopy = {
-  birthYear: 1992,
-};
+// let jessicaCopy = {
+//   birthYear: 1992,
+// };
 
-Object.assign(jessicaCopy, jessica2);
-//console.log(jessicaCopy);
+// Object.assign(jessicaCopy, jessica2);
+// //console.log(jessicaCopy);
 
-jessicaCopy.family.push('tuilo', 'jeromel');
-console.log(jessica2, jessicaCopy);
+// jessicaCopy.family.push('tuilo', 'jeromel');
+// console.log(jessica2, jessicaCopy);
 
 //shallow copies, as Object.assign() and rest operator [...] only copies the properties in the first level
 //if there are objects assigned inside the copied object, they will not be cloned
