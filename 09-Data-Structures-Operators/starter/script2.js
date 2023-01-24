@@ -13,6 +13,14 @@ console.log(restaurant);
 const arr = [2, 3, 4, 5];
 
 const [a, b, c] = arr;
+//when JS sees this array structure on the left side of the equal assignment
+//it knows it is destructuring
+//always declare variables in destructuriing using const
+
 console.log(a);
 console.log(b);
 console.log(c);
+
+const [first, , second] = restaurant.categories;
+
+console.log(first, second);
