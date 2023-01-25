@@ -36,6 +36,12 @@ const restaurant = {
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`
+    );
+  },
 };
 
 // restaurant.orderDelivery({
@@ -155,3 +161,22 @@ console.log(menu);
 const str = 'matheus';
 const letters = [...str];
 console.log(letters);
+
+// const ingredients = [
+//   prompt("Let's make pasta! Ingredient 1?"),
+//   prompt("Let's make pasta! Ingredient 2?"),
+//   prompt("Let's make pasta! Ingredient 3?"),
+// ];
+// mushrooms
+// restaurant.orderPasta(...ingredients);
+
+//Spread Operators with Objects - We can do shallow copies of objects with the spread operator
+const newRestaurant = { founding: 1998, ...restaurant, founder: 'Giuseppe' };
+
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurant.name);
+console.log(restaurantCopy.name);
