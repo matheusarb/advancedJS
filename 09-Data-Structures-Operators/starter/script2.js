@@ -141,20 +141,20 @@ const arr = [7, 8, 9];
 const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
 console.log(badNewArr);
 const goodArr = [1, 2, ...arr];
-console.log(goodArr);
+//console.log(goodArr);
 
 //whenever we need to use the individual elements of an array, we use the spread operator
-console.log(...goodArr);
+//console.log(...goodArr);
 
 const newMenu = [...restaurant.mainMenu, 'Gnocci'];
-console.log(newMenu);
+//console.log(newMenu);
 
 //create shallow copies
 const mainMenuCopy = [...restaurant.mainMenu];
 
 //merge arrays together. Join 2 arrays
 const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
-console.log(menu);
+//console.log(menu);
 
 //use on strings
 
@@ -173,10 +173,13 @@ console.log(letters);
 //Spread Operators with Objects - We can do shallow copies of objects with the spread operator
 const newRestaurant = { founding: 1998, ...restaurant, founder: 'Giuseppe' };
 
-console.log(newRestaurant);
+//console.log(newRestaurant);
 
 const restaurantCopy = { ...restaurant };
 
 restaurantCopy.name = 'Ristorante Roma';
-console.log(restaurant.name);
-console.log(restaurantCopy.name);
+// console.log(restaurant.name);
+// console.log(restaurantCopy.name);
+
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
