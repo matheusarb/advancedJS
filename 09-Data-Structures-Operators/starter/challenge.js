@@ -60,11 +60,6 @@ const game = {
     x: 3.25,
     team2: 6.5,
   },
-
-  printChanceToWin: function () {
-    const probableWinner = Math.min(game.odds.team1, game.odds.team2);
-    console.log(``);
-  },
 };
 
 //1.
@@ -96,3 +91,5 @@ function printGoals(...players) {
 printGoals(...game.scored);
 
 //7.
+team1 < team2 && console.log('Team1 is more likely to win');
+team1 > team2 && console.log('Team2 is more likely to win');
