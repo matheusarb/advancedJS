@@ -66,21 +66,58 @@ const [a, b, ...others] = [1, 2, 3, 4, 5];
 //Functions with REST PATTERN
 //rest takes all the arguments passed to the function and packs them into an array
 
-const add = function (...numbers) {
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
-  return sum;
-};
+// const add = function (...numbers) {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+//   return sum;
+// };
 
 // add(2, 3);
 // add(5, 3, 7, 2);
 // add(8, 2, 5, 3, 2, 1, 4);
 
-const x = [23, 5, 7];
+// const x = [23, 5, 7];
 
 //here we use the spread operator, which takes all the elements from the array and spread
 //them as arguments of the function
-console.log(add(...x));
+//console.log(add(...x));
 
-restaurant.orderPizza('mushrooms', 'onion', ' olives', ' chicken');
-restaurant.orderPizza('cheese');
+//restaurant.orderPizza('mushrooms', 'onion', ' olives', ' chicken');
+// restaurant.orderPizza('cheese');
+console.log('---Section over---');
+
+//3. SHORT-CIRCUITING && AND ||
+//use and return ANY data type
+//short-circuiting
+
+// console.log(3 || 'matheus');
+// console.log('' || 'jonas');
+// console.log(true || 0);
+// console.log(undefined || null);
+
+console.log('3. Short-Circuiting Section. || and &&');
+restaurant.numGuests = 0;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+// // with the && the evaluation continues until the last truthy value or until it finds
+// // the first falsy value, and displays it
+// console.log(0 && 'Jonas');
+// console.log(10 && 'Jonas');
+// console.log('helo' && 23 && null && 'matheus');
+
+// if (restaurant.orderPizza) {
+//   restaurant.orderPizza('musuhroom', 'pepperoni');
+// }
+
+// restaurant.orderPizza && restaurant.orderPizza('mushy', 'meat');
+//Nullish coalescing operator works with the idea of nullish values
+// Zeros and empty strings does exist with this operator
+console.log('---Section over---');
+console.log('4. Nullish coalescing operator');
+
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
