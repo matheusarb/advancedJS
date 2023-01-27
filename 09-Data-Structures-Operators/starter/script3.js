@@ -114,10 +114,11 @@ console.log(guests2);
 // }
 
 // restaurant.orderPizza && restaurant.orderPizza('mushy', 'meat');
-//Nullish coalescing operator works with the idea of nullish values
+// 4. Nullish coalescing operator works with the idea of nullish values
 // Zeros and empty strings does exist with this operator
 console.log('---Section over---');
 console.log('4. Nullish coalescing operator');
 
 const guestCorrect = restaurant.numGuests ?? 10;
 console.log(guestCorrect);
+console.log();
