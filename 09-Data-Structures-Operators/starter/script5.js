@@ -108,12 +108,12 @@ const arr = [1, 2];
 rest.set(arr, 'Test');
 rest.set(document.querySelector('h1'), 'Heading');
 
-console.log(rest.get(time >= rest.get('open') && time < rest.get('close')));
+// console.log(rest.get(time >= rest.get('open') && time < rest.get('close')));
 
-console.log(rest.has('categories'));
-rest.delete(2);
-console.log(rest);
-console.log(rest.get(arr));
+// console.log(rest.has('categories'));
+// rest.delete(2);
+// console.log(rest);
+// console.log(rest.get(arr));
 
 const question = new Map([
   ['question', 'What is the best programming language in the world?'],
@@ -125,10 +125,27 @@ const question = new Map([
   [false, 'Try Again'],
 ]);
 
-console.log(question);
+// console.log(question);
 
-//Convert object to map
+//convert OBJECT TO MAP
 //Little trick when you need a Map from an existing object
-console.log(Object.entries(openingHours));
+
+// console.log(Object.entries(openingHours));
 const hoursMap = new Map(Object.entries(openingHours));
-console.log(hoursMap);
+// console.log(hoursMap);
+
+//maps are iterable and the for of loop is available to use on them
+console.log(question.get('question'));
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+}
+// const answer = Number(prompt('Your answer'));
+const answer = 'random value to evade bug';
+console.log(answer);
+console.log(question.get(question.get('correct') === answer));
+
+//convert map BACK TO ARRAY
+console.log([...question]);
+console.log(question.entries());
+console.log([...question.keys()]);
+console.log([...question]);
