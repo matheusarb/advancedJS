@@ -50,3 +50,28 @@ const message = 'Go to gate 23!';
 console.log(message.padStart(25, '+'));
 console.log('jonas'.padStart(25, '+'));
 console.log('jonas'.padEnd(30, '+'));
+
+//FUNCTION FOR MASKING CREDIT CARD NUMBERS
+
+const maskCreditCard = function (number) {
+  const str = number + '';
+  const last4Characters = str.slice(-4);
+  return last4Characters.padStart(str.length, '*');
+};
+
+console.log(maskCreditCard(32456658));
+console.log(maskCreditCard(324566587534));
+console.log(maskCreditCard('32456658736567534'));
+
+// .repeat()
+const message2 = 'Bad weather... All departures delayed ';
+console.log(message2.repeat(5));
+
+const planesInLine = function (planesNum) {
+  console.log(
+    `There are ${planesNum} planes waiting in line ${'✈'.repeat(planesNum)}`
+  );
+};
+
+planesInLine(5);
+planesInLine(3);
