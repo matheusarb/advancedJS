@@ -46,3 +46,15 @@ console.log(plane.startsWith('A320'));
 if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
   console.log('part of the NEW Airbus Family');
 }
+
+// Practice Exercise
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('you are not allowed on board');
+  } else {
+    console.log('welcome aboard!');
+  }
+};
+
+checkBaggage('');
